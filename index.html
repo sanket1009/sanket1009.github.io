@@ -13,8 +13,8 @@
   --bg:#0a0c0f; --surface:#111620; --surface2:#161d2a;
   --border:#1e2a38; --border2:#253447;
   --blue:#1d6fa4; --bright:#60a5fa;
-  --text:#edf0f4; --muted:rgba(237,240,244,0.55);
-  --faint:rgba(237,240,244,0.25); --whisper:rgba(237,240,244,0.08);
+  --text:#edf0f4; --muted:rgba(237,240,244,0.80);
+  --faint:rgba(237,240,244,0.55); --whisper:rgba(237,240,244,0.15);
   --crimson:#e83535; --crimson2:#7f1d1d;
   --green:#22c55e;
   --serif:"Playfair Display",Georgia,serif;
@@ -46,8 +46,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:52px;background:rgba
 .hero-left{display:flex;flex-direction:column;background:var(--surface);position:relative;z-index:2;border-right:1px solid var(--border);}
 .hero-content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:2.5rem 2.25rem 1.5rem;}
 .hero-role{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-bottom:1.1rem;opacity:0;animation:fadeUp 0.5s 0.2s ease forwards;}
-.hero-photo-wrap{margin-bottom:1.1rem;opacity:0;animation:fadeUp 0.5s 0.4s ease forwards;}
-.hero-photo{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid var(--border2);box-shadow:0 0 0 4px rgba(29,111,164,0.15);display:block;}
+.hero-photo-wrap{margin-bottom:1.1rem;opacity:0;animation:fadeUp 0.5s 0.4s ease forwards;display:flex; justify-content:center;}
+.hero-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--border2);box-shadow:0 0 0 4px rgba(29,111,164,0.15);display:block;}
 .hero-name{margin-bottom:1.25rem;line-height:0.9;}
 .name-first{display:block;font-family:var(--serif);font-size:58px;font-weight:700;color:var(--text);letter-spacing:-0.02em;opacity:0;transform:translateY(20px);animation:fadeUp 0.7s 0.55s ease forwards;}
 .name-last{display:block;font-family:var(--serif);font-size:58px;font-weight:700;color:var(--bright);font-style:italic;letter-spacing:-0.02em;opacity:0;transform:translateY(20px);animation:fadeUp 0.7s 0.72s ease forwards;}
@@ -92,7 +92,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:52px;background:rgba
 /* SHARED SECTION */
 section{position:relative;overflow:hidden;}
 .section-inner{max-width:1200px;margin:0 auto;padding:6rem 3rem;position:relative;z-index:2;}
-.section-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem;display:block;}
+.section-label{font-family:var(--mono);font-size:15px;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem;display:block;}
 .section-headline{font-family:var(--sans);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;line-height:1.05;color:var(--text);letter-spacing:-0.02em;margin-bottom:0.5rem;}
 .section-headline .serif-em{font-family:var(--serif);font-style:italic;color:var(--bright);font-weight:700;}
 .section-bg-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.5;}
@@ -565,7 +565,7 @@ section{position:relative;overflow:hidden;}
         <div class="exp-dot"></div>
         <div class="exp-card">
           <div class="exp-header" onclick="toggleExp(this)">
-            <div class="exp-logo-wrap">
+            <div class="exp-logo-wrap" style="background:#ffffff;">
               <img src="assets/logos/railtec.png" class="exp-logo" alt="RailTEC">
             </div>
             <div class="exp-info">
